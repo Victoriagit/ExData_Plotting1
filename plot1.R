@@ -1,5 +1,5 @@
 ##Loading the dataset
-e_power <- read.csv(file = "/User/cfarin/Downloads/household_power_consumption.txt", 
+e_power_consumption <- read.csv(file = "/User/cfarin/Downloads/household_power_consumption.txt", 
         header = TRUE, sep = ";", na.strings = "?")
 
 ## Subsetting the Date
