@@ -1,15 +1,15 @@
 ##Loading the dataset
-e_power_consumption <- read.csv(file = "/User/cfarin/Downloads/household_power_consumption.txt", 
+e_power_consumption <- read.csv(file = "/Users/cfarin/Downloads/household_power_consumption.txt", 
         header = TRUE, sep = ";", na.strings = "?")
 
 ## Subsetting the Date
-date <- subset(e_power_consumption, subset=(Date == "2007-02-01" & Date == "2007-02-02"))
+date <- subset(e_power_consumption, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 
 ##Converting the date variable to date class
 date_class <- as.Date(e_power_consumption$Date, format = "%d/%m/%Y")
 
 ##Converting the Date and Time
-date_time <- paste(e_power_consumption$Date), e_power_consumption$Time)
+date_time <- paste(as.Date(e_power_consumption$Date), e_power_consumption$Time)
 
 ##Plotting & Saving to png file 
 
